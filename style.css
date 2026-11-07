@@ -1,0 +1,414 @@
+/* CSS Reset & Cute Red & Cream Color Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-cream: #FAF6F0;        /* Soft Aesthetic Cream background */
+    --card-cream: #FFFDF9;      /* Crisp clean cream for cards */
+    --primary-red: #D9383A;     /* Cool vivid red */
+    --dark-red: #B02325;        /* Deep rich red for hover states */
+    --light-pink: #FDE8E8;      /* Cute soft red/pink background tint */
+    --text-dark: #2B1819;       /* Warm dark brown-black text for readability */
+    --text-muted: #7A6263;      /* Soft muted brown for secondary text */
+    --border-pink: #F4CECE;     /* Cute subtle border */
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Background Soft Glow Blobs */
+.bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.6;
+}
+.blob-1 {
+    width: 350px;
+    height: 350px;
+    background-color: #FCD5D5;
+    top: -50px;
+    right: -50px;
+}
+.blob-2 {
+    width: 400px;
+    height: 400px;
+    background-color: #F8E2E2;
+    bottom: 20%;
+    left: -100px;
+}
+
+/* Cute Fixed Header Navbar */
+header {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1000px;
+    background-color: rgba(255, 253, 249, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    border: 2px solid var(--border-pink);
+    box-shadow: 0 8px 24px rgba(217, 56, 58, 0.08);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-red);
+}
+
+.logo .heart {
+    color: var(--primary-red);
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-red);
+}
+
+/* Hero Section & Profile Picture Layout */
+.hero-header {
+    text-align: center;
+    padding: 9rem 1rem 3rem 1rem;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Para responsive sa mobile phones */
+}
+
+/* Pabilog na Profile Picture Styles */
+.profile-avatar-wrap {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    box-shadow: 0 10px 25px rgba(217, 56, 58, 0.15);
+    flex-shrink: 0;
+    border: 2px solid var(--border-pink);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+}
+
+.hero-text-wrap {
+    text-align: left;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: var(--light-pink);
+    color: var(--primary-red);
+    padding: 0.4rem 1.2rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid var(--border-pink);
+}
+
+.hero-header h1 {
+    font-size: 3.2rem;
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+.name-highlight {
+    color: var(--primary-red);
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+
+/* General Sections */
+section {
+    padding: 3rem 10% 4rem 10%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title-wrap {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--primary-red);
+}
+
+.section-desc {
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 0.2rem;
+}
+
+/* Essential Section 1: Bio Container */
+.about-container {
+    background-color: var(--card-cream);
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 2px solid var(--border-pink);
+    box-shadow: 0 10px 30px rgba(217, 56, 58, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.about-container:hover {
+    transform: translateY(-4px);
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.about-container strong {
+    color: var(--primary-red);
+}
+
+/* Essential Section 2: Technical Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    background-color: var(--card-cream);
+    padding: 1.8rem;
+    border-radius: 20px;
+    border: 2px solid var(--border-pink);
+    box-shadow: 0 8px 20px rgba(217, 56, 58, 0.04);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-red);
+}
+
+.skill-category h3 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-pill {
+    background-color: var(--light-pink);
+    color: var(--primary-red);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    border: 1px solid var(--border-pink);
+    transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+/* Essential Section 3: Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+}
+
+.project-card {
+    background-color: var(--card-cream);
+    padding: 2rem;
+    border-radius: 24px;
+    border: 2px solid var(--border-pink);
+    box-shadow: 0 10px 25px rgba(217, 56, 58, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-red);
+}
+
+.project-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--light-pink);
+    color: var(--primary-red);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Essential Section 4: Contact & Links */
+.contact-section {
+    text-align: center;
+}
+
+.contact-card {
+    background-color: var(--card-cream);
+    padding: 3rem 2rem;
+    border-radius: 30px;
+    border: 2px solid var(--border-pink);
+    box-shadow: 0 12px 30px rgba(217, 56, 58, 0.06);
+}
+
+.contact-card p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.85rem 1.8rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--primary-red);
+    color: white;
+    box-shadow: 0 6px 16px rgba(217, 56, 58, 0.25);
+}
+
+.primary-btn:hover {
+    background-color: var(--dark-red);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(217, 56, 58, 0.35);
+}
+
+.secondary-btn {
+    background-color: var(--light-pink);
+    color: var(--primary-red);
+    border: 2px solid var(--border-pink);
+}
+
+.secondary-btn:hover {
+    background-color: var(--primary-red);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+footer strong {
+    color: var(--primary-red);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        width: 95%;
+        padding: 0.8rem 1.2rem;
+    }
+    .hero-header h1 {
+        font-size: 2.4rem;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text-wrap {
+        text-align: center;
+    }
+}
